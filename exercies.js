@@ -89,4 +89,83 @@ console.log(hound);
 // Only change code below this line
 */
 
-//?7-
+//todo: Ejercicio del dia 28: 6/3/2023
+
+//?7-Extend Constructors to Receive Arguments
+
+/*
+function Dog(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+
+let terrier = new Dog("Tobi", "Black");
+//Lo que se hace que en esta funcion hacemos unos parametros para hacer un contructor
+//Donde ponemos los valores que se vayan a insertar en el contructor y luego en un nuevo valor
+//Se pondran los valores que el usuario quiere, en este caso Tobi y Black. Ademas de la cantidad de patas del perro
+
+console.log(terrier);
+*/
+
+//?8-Verify an Object's Constructor with instanceof
+
+/*
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+let myHouse = new House(5);
+
+myHouse instanceof House;
+//Lo que esta se encarga de aparte de llamar los valores del contructor
+//En el ultimo codigo instanceof permite si se esta llamando la funcion o no con un true o false
+
+console.log(myHouse);
+
+// Only change code below this line
+*/
+
+//?9-Understand Own Properties
+
+/*
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+
+for (let property in canary){
+  if(canary.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+}
+//Lo que se hace despues de crear un contructor y los valores que quieres agregar
+//Ahora creamos un for donde se llamara todos los valores del contructor en un arreglo
+
+console.log(ownProps);
+// Only change code below this line
+*/
+
+//?10-Use Prototype Properties to Reduce Duplicate Code
+
+/*
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+// Only change code above this line
+let beagle = new Dog("Snoopy");
+
+console.log(beagle.name, beagle.numLegs);
+
+//Lo que se hace que al valor de perro se le agrega una propiedad al contructor con prototype
+//Aparte se les llama en consola por el nuevo nombre del valor y .Propiedad que quieras mostrar
+*/
+
+//?11-Iterate Over All Properties
+

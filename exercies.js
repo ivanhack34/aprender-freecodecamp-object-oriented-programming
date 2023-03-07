@@ -167,5 +167,109 @@ console.log(beagle.name, beagle.numLegs);
 //Aparte se les llama en consola por el nuevo nombre del valor y .Propiedad que quieras mostrar
 */
 
+//todo: Ejercicio del dia 29: 7/3/2023
+
 //?11-Iterate Over All Properties
+
+/*
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+for(let property in beagle){
+  if(beagle.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
+}
+
+//Lo que hace este codigo que aparte de crear un contructor y los valores externo de ese mismo 
+//Se crea unos valores uno donde se guarde los valores internos de la funcion y otro de manera externa
+//Donde se crear un for donde si el perro tiene el las propiedades dentro del contructor es ownProps
+//En el caso de que es fuera es prototypeProps
+
+console.log(ownProps); //name
+console.log(prototypeProps); //numLegs
+*/
+
+//?12-Understand the Constructor Property
+
+/*
+function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+function joinDogFraternity(candidate) {
+ if (candidate.constructor === Dog) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//Este codigo lo que hare que en una funcion buscara al candidato de el constructor, en este caso el estrictamente igual
+//Para que retorne verdadero o falso
+
+console.log(joinDogFraternity("chiguagua"));
+*/
+
+//?13-Change the Prototype to a New Object
+
+/*
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  // Only change code below this line
+  numLegs: 4,
+  eat: function(){
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+
+//Lo que hace esto es describir el objeto en si, como aparte de poner una propiedad, 
+//Tambien se le puede poner como valor atra funcion y que en este caso haga la descripción
+
+console.log(Dog.prototype);
+*/
+
+//?14-Remember to Set the Constructor Property when Changing the Prototype
+/*
+function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+Dog.prototype = {
+  constructor: Dog,
+  numLegs: 4,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+
+//Esto lo que hara el contructor es para verificar si la propiedad se cumple o no 
+
+let myDog = new Dog("Fido");
+console.log(myDog.constructor);
+*/
+
+//?15-Understand Where an Object’s Prototype Comes From
+
 
